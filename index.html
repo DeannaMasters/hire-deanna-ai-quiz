@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Candidate Assessment: Deanna Masters</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: #0a0a0a;
+    color: #d0f0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  #chat-container {
+    background: #121212;
+    width: 90%;
+    max-width: 600px;
+    height: 80vh;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #00ffff33;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  #chat-log {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding-right: 5px;
+  }
+  .message {
+    max-width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    line-height: 1.3em;
+    word-wrap: break-word;
+  }
+  .ai {
+    background: #00ffff22;
+    align-self: flex-start;
+    color: #d0f0ff;
+  }
+  .user {
+    background: #00ffff44;
+    align-self: flex-end;
+    color: #0a0a0a;
+  }
+  #answer-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  #answer-buttons button {
+    background: #00ffff22;
+    color: #d0f0ff;
+    border: 1px solid #00ffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  #answer-buttons button:hover {
+    background: #00ffff44;
+  }
+  .loading {
+    font-style: italic;
+    color: #a0e0ff;
+  }
+</style>
+</head>
+<body>
+<div id="chat-container">
+  <div id="chat-log"></div>
+  <div id="answer-buttons"></div>
+</div>
+
+<script>
+const quizData = [
+  {
+    question: "Initializing candidate scan... Do you value leadership and discipline in your team members?",
+    answers: ["Yes", "Absolutely", "Of course"]
+  },
+  {
+    question: "Analyzing technical potential... Do you want someone eager to learn cybersecurity and AI?",
+    answers: ["Yes", "Definitely", "Absolutely"]
+  },
+  {
+    question: "Evaluating problem-solving ability... Do you appreciate creative, tech-savvy thinkers?",
+    answers: ["Yes", "Indeed", "For sure"]
+  },
+  {
+    question: "Scanning veteran experience... Would you value a candidate who brings discipline and resilience from military service?",
+    answers: ["Yes", "Absolutely", "Certainly"]
+  }
+];
+
+const chatLog = document.getElementById('chat-log');
+const answerButtons = document.getElementById('answer-buttons');
+let currentQuestion = 0;
+
+function typeMessage(message, className, callback) {
+  const messageEl = document.createElement('div');
+  messageEl.className = `message ${className}`;
+  chatLog.appendChild(messageEl);
+  chatLog.scrollTop = chatLog.scrollHeight;
+
+  let i = 0;
+  const typingInterval = setInterval(() => {
+    messageEl.textContent += message.charAt(i);
+    i++;
+    chatLog.scrollTop = chatLog.scrollHeight;
+    if (i >= message.length) {
+      clearInterval(typingInterval);
+      if (callback) callback();
+    }
+  }, 25);
+}
+
+function showQuestion() {
+  if (currentQuestion < quizData.length) {
+    const q = quizData[currentQuestion];
+    typeMessage(q.question, 'ai', () => {
+      answerButtons.innerHTML = '';
+      q.answers.forEach(answer => {
+        const btn = document.createElement('button');
+        btn.textContent = answer;
+        btn.addEventListener('click', () => {
+          typeMessage(answer, 'user', () => {
+            simulateAnalysis(() => {
+              currentQuestion++;
+              showQuestion();
+            });
+          });
+        });
+        answerButtons.appendChild(btn);
+      });
+    });
+  } else {
+    displayResult();
+  }
+}
+
+function simulateAnalysis(callback) {
+  answerButtons.innerHTML = '';
+  typeMessage("Analyzing response...", 'ai', () => {
+    setTimeout(callback, 1200);
+  });
+}
+
+function displayResult() {
+  typeMessage("System analysis complete.\nOptimal candidate identified: Deanna Masters.", 'ai');
+}
+
+// Start the quiz
+showQuestion();
+</script>
+</body>
+</html>
