@@ -1,59 +1,39 @@
-# hire-deanna-ai-quiz
-This quiz is an interactive web experience built with HTML, CSS, and JavaScript. Styled like an AI interview console, it guides users through a series of questions before rendering its final decision. This project blends programming skill with creativity and a futuristic interface.
+# AI Candidate Assessment – Interactive Web Application
 
-# 🧠 AI Candidate Assessment — "Hire Deanna Masters"
+## Overview
+Interactive quiz-style web application built with **HTML, CSS, and JavaScript** that simulates an AI-driven interview experience. The project demonstrates frontend logic, DOM manipulation, and user interaction through a dynamic chat-style interface.
 
-### System analysis complete. Optimal candidate identified: **Deanna Masters**.
+## Tech Stack
+- HTML5
+- CSS3 (custom styling and responsive layout)
+- JavaScript (DOM manipulation, dynamic UI interactions)
 
----
-
-## 💡 Overview
-**AI Candidate Assessment** is an interactive, chat-based web experience built with **HTML, CSS, and JavaScript**.  
-It simulates an AI hiring system that guides the user through a short series of questions before generating one undeniable conclusion — that the ideal hire is Deanna Masters.
-
-This project showcases creativity, web development skills, and a passion for **cybersecurity** and **artificial intelligence**, all wrapped in a futuristic and engaging design.
-
----
-
-## 🎯 Features
-- **AI Chat Interface:** A simulated AI interviewer that interacts through a dynamic chat box.  
-- **Typing Animation:** Realistic message delivery to mimic live AI analysis.  
-- **Responsive Design:** Works seamlessly on both desktop and mobile devices.  
-- **Personal Branding:** Highlights veteran experience, discipline, and curiosity for AI and cybersecurity.  
-- **Interactive Ending:** Delivers a professional AI verdict:  
-  > “System analysis complete. Optimal candidate identified: Deanna Masters.”
+## Features
+- Simulated AI chat interface with dynamic message rendering
+- Typing animation to mimic real-time AI responses
+- Responsive design for desktop and mobile
+- Interactive flow that guides users through a structured question sequence
 
 ---
 
-## 🛠️ Technologies Used
-- HTML5  
-- CSS3 (custom styling and responsive layout)  
-- JavaScript (DOM manipulation, dynamic interactions)
+## Project Concept
+Styled as an AI interview console, the application walks users through a short assessment before rendering a final decision. The project blends programming fundamentals with creative UX design and personal branding.
+
+> “System analysis complete. Optimal candidate identified: Deanna Masters.”
 
 ---
 
-## 🚀 How to Run Locally
-1. Clone this repository or download the `index.html` file.
+## How to Run Locally
+1. Clone the repository or download the files.
 2. Open `index.html` in any modern web browser.
-3. Interact with the AI — no setup or dependencies required!
+3. No build tools or dependencies required.
 
 ---
 
-## 🌐 Live Demo
-[View the Project Here](https://yourusername.github.io/hire-deanna-ai-quiz)  
-*(Replace with your actual GitHub Pages or Replit link once published.)*
+## About the Creator
+Created by **Deanna Masters**, an entry-level software engineer and cybersecurity student with an interest in AI-driven user experiences and secure system design.
 
----
+- GitHub: https://github.com/DeannaMasters
+- LinkedIn: https://www.linkedin.com/in/deanna-masters-7468ba108/
 
-## 👩‍💻 About the Creator
-Created by **Deanna Masters** — U.S. veteran and emerging professional in **cybersecurity** and **artificial intelligence**.  
-Passionate about innovative technology, secure system design, and creative software development.
-
-- 🔗 [LinkedIn](https://www.linkedin.com/in/deanna-masters-7468ba108/)
-- 💻 [GitHub](https://github.com/DeannaMasters)
-- ✉️ Contact: dmasters4309@gmail.com
-
----
-
-> “When innovation meets discipline and curiosity, great systems — and great hires — are built.”
 
